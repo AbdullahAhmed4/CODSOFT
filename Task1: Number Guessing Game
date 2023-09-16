@@ -1,1 +1,44 @@
+/*****************************************************************************/
+/*****************************************************************************/
+/*****************     CodeSoft Internship             ************************/
+/*****************     Intern: Abdullah Ahmed         ************************/
+/*****************     Task no.: 1                    ************************/
+/*****************     Task name:NUMBER GUESSING GAME ************************/
+/*****************************************************************************/
+/*****************************************************************************/
+
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+using namespace std;
+
+int main()
+{
+	//Starting Screen
+	cout << "Welcome to NUMBER GUESSING GAME \n";
+	cout << "You have to guess a number between 1 and 100. \n";
+
+	// Declaration of Variables
+	int RandomNumber, TheGuess, Times = 0;
+
+	//Generation of a random number
+	srand(time(0));
+	RandomNumber = rand() % 100 + 1;
+
+	//Asking the user to guess the number and giving him Feedback.
+	do
+	{
+		cout << "Please guess a number between 1 and 100 : ";
+		cin >> TheGuess;
+		Times++;
+		if (TheGuess > RandomNumber)
+			cout << "Too high \n";
+		else if (TheGuess < RandomNumber)
+			cout << "Too low \n";
+		else
+			cout << " Congratulations! You got it in " << Times << " guesses \n";
+	} while (TheGuess != RandomNumber);
+
+	return 0;
+}
 
