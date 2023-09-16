@@ -1,1 +1,61 @@
+/***************************************************************************/
+/***************************************************************************/
+/*****************     CodeSoft Internship           ************************/
+/*****************     Intern: Abdullah Ahmed       ************************/
+/*****************     Task no.: 2                  ************************/
+/*****************     Task name: SIMPLE CALCULATOR ************************/
+/***************************************************************************/
+/***************************************************************************/
+
+#include <iostream>
+using namespace std;
+int main()
+{
+	// Declaration of Variables
+	float Number1, Number2, result;
+	int Flag;
+	cout << "Please enter two numbers \n";
+	cout << "First number: \n";
+	cin >> Number1;
+	cout << "Second number: \n";
+	cin >> Number2;
+	cout << "Choose the Operation by pressing: \n";
+	cout << "1 for addition, 2 for subtraction, 3 for multiplication, 4 for division \n";
+	cin >> Flag;
+
+	switch (Flag)
+	{
+		//Addition Operation
+	case 1:
+		result = Number1 + Number2;
+		cout << "the Result = " << result << "\n";
+		break;
+
+		//Subtraction Operation
+	case 2:
+		result = Number1 - Number2;
+		cout << "the Result = " << result << "\n";
+		break;
+
+		//Multiplication Operation
+	case 3:
+		result = Number1 * Number2;
+		cout << "the Result = " << result << "\n";
+		break;
+
+		//Division Operation
+	case 4:
+		result = Number1 / Number2;
+		if (Number2 != 0)
+			cout << "the Result = " << result << "\n";
+		else
+			cout << " undefined Value : \n";
+		break;
+
+		//FOr Undefined Behavior
+	default:
+		cout << "Invalid Entry  \n";
+	}
+	return 0;
+}
 
